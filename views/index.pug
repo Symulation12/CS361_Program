@@ -1,3 +1,8 @@
 extends layout
 
-
+block projectContent
+  .content 
+    each article in articles
+      .articleBlock
+        h2.content-subhead= article["title"]
+        p= article["contents"]
