@@ -40,7 +40,6 @@
     
     function handleEvent(e) {
         var elements = getElements();
-        
         if (e.target.id === elements.menuLink.id) {
             toggleAll();
             e.preventDefault();

@@ -3,6 +3,14 @@ extends layout
 block projectContent
   .content 
     each article in articles
-      .articleBlock
-        h2.content-subhead= article["title"]
-        p= article["contents"]
+      if filter !== ""
+        if article["source"] === filter
+          .articleBlock
+            h2.content-subhead
+              a(href=`/${article["id"]}`)= article["title"]
+            p= article["contents"]
+      else 
+        .articleBlock
+          h2.content-subhead
+            a(href=`/${article["id"]}`)= article["title"]
+          p= article["contents"]
