@@ -2,6 +2,32 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    //Pure css setup
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous")
+    link(rel="stylesheet" href="/stylesheets/sidebar.css")
+    script(src="/javascripts/ui.js")
   body
     block content
+      #layout 
+            a.menu-link#menuLink(href="#menu")
+                span 
+            #menu 
+                .pure-menu 
+                    a.pure-menu-heading(href="/") Settings!
+
+                    block sidebar
+                        ul.pure-menu-list 
+                            li.pure-menu-item
+                                a.pure-menu-link(href="/") Source 1
+                            li.pure-menu-item 
+                                a.pure-menu-link(href="/") Source 2
+                            li.pure-menu-item 
+                                a.pure-menu-link(href="/") Source 3
+                            li.pure-menu-item 
+                                a.pure-menu-link(href="/") Source 4
+            #main
+                block projectContent
+                    .content 
+                        h2.content-subhead Put articles here 
+                        p Article Text
