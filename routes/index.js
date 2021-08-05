@@ -16,8 +16,17 @@ const articles =
 {title: "Moon weather", contents: "Today on the MOON", source: "Source-5", id: 6},
 {title: "What does the fish say?", contents: "Blub blub", source: "Source-6", id: 7}]
 /* GET home page. */
-router.get('/*', function(req, res, next) {
-  res.render('index', { title: 'Main Page', sources: dummySources, filter: req.originalUrl.slice(1), articles: articles });
+router.get('/article', function(req, res, next) {
+  res.render('index', { title: 'Main Page', sources: dummySources, 
+    filter: req.query["filter"] ? req.query["filter"] : "", 
+    articles: articles, 
+    id: req.query["id"] ? req.query["id"] : -1 });
 });
+
+router.get('/settings', function(req, res, next) {
+
+  res.render('settings');
+
+})
 
 module.exports = router;

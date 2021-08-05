@@ -7,6 +7,7 @@ html
     link(rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous")
     link(rel="stylesheet" href="/stylesheets/sidebar.css")
     script(src="/javascripts/ui.js")
+    script(src="/javascripts/siteFunctions.js")
   body
     block content
       #layout 
@@ -14,17 +15,20 @@ html
                 span 
             #menu 
                 .pure-menu 
-                    a.pure-menu-heading(href="/") Settings!
+                    a.pure-menu-heading(href="/settings") settings
+                      img.settings(src="images/highqualitygearicon.png" width=32 height=32)
+                      
+                        
 
                     block sidebar
                         ul.pure-menu-list 
                             each v in sources
                               if v === filter
                                 li.pure-menu-item.pure-menu-selected
-                                  a.pure-menu-link(href="/")= v
+                                  a.pure-menu-link(href="/article")= v
                               else 
                                 li.pure-menu-item
-                                  a.pure-menu-link(href=`/${v}`)= v
+                                  a.pure-menu-link(href=`/article?filter=`+v)= v
       
             #main
                 block projectContent

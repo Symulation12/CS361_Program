@@ -3,6 +3,15 @@ body {
     background-color: rgb(44, 44, 16);
 }
 
+input {
+    margin: 0.3em;
+}
+
+.settings {
+    float: right;
+    text-align: right;
+    vertical-align: center;
+}
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
@@ -54,9 +63,9 @@ The content `<div>` is where all your content goes.
 }
 .header {
      margin: 0;
-     color: #333;
+     color: rgb(156, 155, 155);
      text-align: center;
-     padding: 2.5em 2em 0;
+     padding: 2.5em 2em 0.5em;
      border-bottom: 1px solid #eee;
  }
     .header h1 {
