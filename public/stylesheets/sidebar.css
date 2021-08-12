@@ -8,9 +8,9 @@ input {
 }
 
 .settings {
-    float: right;
     text-align: right;
     vertical-align: center;
+    display: inline-block;
 }
 .pure-img-responsive {
     max-width: 100%;
@@ -159,6 +159,9 @@ appears on the left side of the page.
         font-size: 110%;
         color: #fff;
         margin: 0;
+        position: relative;
+        text-align: center;
+        
     }
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/

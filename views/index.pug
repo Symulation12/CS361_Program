@@ -9,13 +9,13 @@ block projectContent
             .articleBlock
               h2.content-subhead
                 a(href='/article?id='+article.id)= article["title"]
-              p= article["contents"]
+              p= article["content"]
         else 
           .articleBlock
             h2.content-subhead
               a(href='/article?id='+article.id)= article["title"]
-            p= article["contents"]
+            p= article["content"]
     else 
       .bigArticle 
         h1.header= articles[id]["title"]
-        p= articles[id]["contents"]
+        p= articles[id]["content"]
