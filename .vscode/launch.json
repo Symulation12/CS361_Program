@@ -5,16 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch via NPM",
+            "command": "npm start",
+            "name": "Run npm start",
             "request": "launch",
-            "runtimeArgs": [
-                "start",
-            ],
-            "runtimeExecutable": "npm",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "pwa-node"
+            "type": "node-terminal"
         },
     ]
 }

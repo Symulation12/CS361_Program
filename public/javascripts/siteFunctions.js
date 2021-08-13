@@ -1,4 +1,0 @@
-function clickArticle(id)
-{
-
-}
