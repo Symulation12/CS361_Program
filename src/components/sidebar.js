@@ -2,8 +2,11 @@ import React from 'react';
 import gear from '../icons/highqualitygearicon.png';
 import plus from '../icons/highqualityplusicon.png';
 import minus from '../icons/highqualityminusicon.png';
+import undo from '../icons/highqualityundoicon.png';
+import { Link } from 'react-router-dom';
 
-export default function Sidebar({sources, setSource, addSource, removeSource, selectedSource})
+
+export default function Sidebar({sources, setSource, addSource, removeSource, undoSource, selectedSource})
 {
     return (
         <>
@@ -13,9 +16,10 @@ export default function Sidebar({sources, setSource, addSource, removeSource, se
             <div id="menu">
                 <div className="pure-menu">
                     <div className="pure-menu-heading">
-                        <a href="/settings">
+                        <img onClick={undoSource} id="undoFeed" src={undo} width="32" height="32" alt=""/>
+                        <Link  to="/settings">
                             <img id="settings" src={gear} width="32" height="32" alt=""/>
-                        </a>
+                        </Link >
                         <img onClick={addSource} id="addFeed" src={plus} width="32" height="32" alt=""/>
                         <img onClick={removeSource} id="removeFeed" src={minus} width="32" height="32" alt=""/>
                     </div>

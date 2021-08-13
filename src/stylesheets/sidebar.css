@@ -1,6 +1,13 @@
 body {
+
     color: #777;
     background-color: rgb(44, 44, 16);
+
+}
+
+body.dark {
+    color: #777;
+    background-color: #000;
 }
 
 input {
