@@ -121,6 +121,12 @@ appears on the left side of the page.
         border: none;
         padding: 0.6em 0 0.6em 0.6em;
     }
+    #menu button {
+        color: #999;
+        border: none;
+        width: 100%;
+        background-color: #191818;
+    }
 
     /*
     Remove all background/borders, since we are applying them to #menu.
@@ -145,6 +151,9 @@ appears on the left side of the page.
         #menu .pure-menu li a:focus {
             background: #333;
         }
+        #menu .pure-menu li button:hover {
+            background: #333;
+        }
 
     /*
     This styles the selected menu item `<li>`.
@@ -160,6 +169,10 @@ appears on the left side of the page.
             color: #fff;
         }
 
+        #menu .pure-menu-selected button {
+            color: #fff;
+            background-color: #333;
+        }
     /*
     This styles the menu heading.
     */
